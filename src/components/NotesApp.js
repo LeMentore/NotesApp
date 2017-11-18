@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NoteEditor from './NoteEditor';
 import NotesGrid from './NotesGrid';
 
-// import 'NotesApp.css';
+import './NotesApp.css';
 
 class NotesApp extends Component{
     constructor(props){
@@ -25,7 +25,7 @@ class NotesApp extends Component{
 
     handleNoteDelete(note) {
         const noteId = note.id;
-        const newNotes = this.state.notes.filter(() => (note) => {
+        const newNotes = this.state.notes.filter((note) => {
             return note.id !== noteId;
         });
         this.setState({ notes: newNotes });

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Masonry from 'masonry-layout';
 import Note from './Note';
 
+import './Note.css';
+
 class NotesGrid extends Component {
     componentDidMount() {
         const grid = this.refs.grid;
@@ -27,7 +29,7 @@ class NotesGrid extends Component {
         return (
             <div className="notes-grid" ref="grid">
                 {
-                    this.props.notes.map(() => (note) => {
+                    this.props.notes.map((note) => {
                         return (
                             <Note
                                 key={note.id}
@@ -39,7 +41,7 @@ class NotesGrid extends Component {
                     })
                 }
             </div>
-        );
+        )
     }
 }
 

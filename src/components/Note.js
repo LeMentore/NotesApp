@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-// import './Note.css';
+import './Note.css';
 
 class Note extends Component{
     render() {
