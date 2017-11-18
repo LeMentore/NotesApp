@@ -17,7 +17,7 @@ class NoteEditor extends Component{
     handleNoteAdd() {
         const newNote = {
             text: this.state.text,
-            color: 'yellow',
+            color: '#'+(Math.random()*0xFFFFFF<<0).toString(16),
             id: Date.now()
         };
 
