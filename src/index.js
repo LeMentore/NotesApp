@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+
+import NotesApp from './components/NotesApp';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<NotesApp />, document.getElementById('root'));
 registerServiceWorker();
 
-if (module.hot) {
-    module.hot.accept('./App', () => {
-        const NextApp = require('./App').default;
-        ReactDOM.render(
-            <NextApp />,
-            document.getElementById('root')
-        )
-    })
-}
+// if (module.hot) {
+//     module.hot.accept('components/NotesApp', () => {
+//         const NextApp = require('components/NotesApp').default;
+//         ReactDOM.render(
+//             <NextApp />,
+//             document.getElementById('root')
+//         )
+//     })
+// }
