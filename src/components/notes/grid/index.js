@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Masonry from 'masonry-layout';
 import Note from 'components/notes/note';
 
-import 'components/notes/grid/NotesGrid.css';
+import 'styles/NotesGrid.css';
 
 class NotesGrid extends Component {
     componentDidMount() {
