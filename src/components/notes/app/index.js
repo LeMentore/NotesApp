@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NoteEditor from 'components/notes/editor';
 import NotesGrid from 'components/notes/grid';
+import Menu from 'components/menu';
 
 import 'styles/NotesApp.css';
 
@@ -40,6 +41,7 @@ class NotesApp extends Component{
     render() {
         return (
             <div className="notes-app">
+                <Menu />
                 <h2 className="app-header">NotesApp</h2>
                 <NoteEditor onNoteAdd={this.handleNoteAdd.bind(this)} />
                 <NotesGrid notes={this.state.notes} onNoteDelete={this.handleNoteDelete.bind(this)} />
