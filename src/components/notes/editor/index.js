@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './NoteEditor.css';
+import 'components/notes/editor/NoteEditor.css';
 
 class NoteEditor extends Component{
     constructor(props){

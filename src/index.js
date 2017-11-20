@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import createHistory from 'history/createBrowserHistory';
+import { Route, Router } from 'react-router-dom';
 
-import NotesApp from './components/NotesApp';
-import registerServiceWorker from './registerServiceWorker';
+import Layout from 'components/layout';
+import registerServiceWorker from 'registerServiceWorker';
 
-ReactDOM.render(<NotesApp />, document.getElementById('root'));
+const history = createHistory();
+
+ReactDOM.render(
+    <Router history={history}>
+        <div>
+            <Route exact path='/' component={Layout}/>
+            <Route path="/messages" component={Layout}/>
+        </div>
+    </Router>,
+    document.getElementById('root')
+);
 registerServiceWorker();
-
-if (module.hot) {
-    module.hot.accept('./components/NotesApp', () => {
-        const NextApp = require('./components/NotesApp').default;
-        ReactDOM.render(
-            <NextApp />,
-            document.getElementById('root')
-        )
-    })
-}

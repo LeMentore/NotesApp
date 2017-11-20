@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Masonry from 'masonry-layout';
-import Note from './Note';
+import Note from 'components/notes/note';
 
-import './Note.css';
+import 'components/notes/grid/NotesGrid.css';
 
 class NotesGrid extends Component {
     componentDidMount() {

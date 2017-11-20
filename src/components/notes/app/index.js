@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import NoteEditor from './NoteEditor';
-import NotesGrid from './NotesGrid';
+import NoteEditor from 'components/notes/editor';
+import NotesGrid from 'components/notes/grid';
 
-import './NotesApp.css';
+import 'components/notes/app/NotesApp.css';
 
 class NotesApp extends Component{
     constructor(props){
