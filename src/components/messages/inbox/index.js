@@ -13,13 +13,20 @@ class InboxPage extends Component {
         }
     };
 
+    static contextTypes = {
+        router: React.PropTypes.object.isRequired
+    };
+
     handlePreviewClick(messageId) {
-        this.context.router.push(`/inbox/messages/${messageId}`);
+        console.log(messageId);
+        console.log(this.context.router);
+        //this.context.router.push(`/messages/inbox/all/${messageId}`);
     };
 
     render() {
+        console.log(this.props);
         const { messages } = this.state;
-        const { messageId: selectedMessageId } = this.props.params;
+        const { messageId: selectedMessageId } = this.props.match.params;
 
         return (
             <div className='InboxPage'>

@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Menu from 'components/menu';
 
+import InboxPage from 'components/messages/inbox'
 import 'styles/MessagesApp.less';
 
-const MessagesApp = () => (
+const MessagesApp = ({ match }) => (
     <div>
-        <Menu />,
+        <Menu />
         <div className='App'>
             <div className='menu-bar'>
                 <div className='menu-item'>
@@ -19,7 +20,7 @@ const MessagesApp = () => (
             </div>
 
             <div className='content'>
-                {this.props.children}
+                {console.log(match)}
             </div>
         </div>
     </div>
