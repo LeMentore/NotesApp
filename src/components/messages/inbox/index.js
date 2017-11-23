@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes  } from 'react';
 
 import MessagePreview from 'components/messages/preview';
 import messages from 'messages.json';
@@ -6,21 +6,17 @@ import messages from 'messages.json';
 import 'styles/MessagesInbox.less';
 
 class InboxPage extends Component {
-    constructor(props){
+    constructor(props, context){
         super(props);
+        context.router;
         this.state = {
             messages
         }
     };
 
-    // static contextTypes = {
-    //     router: React.PropTypes.object.isRequired
-    // };
-
     handlePreviewClick(messageId) {
         console.log(messageId);
-        console.log(this.context.router);
-        //this.context.router.push(`/messages/inbox/all/${messageId}`);
+        // this.context.router.push(`/messages/inbox/all/${messageId}`);
     };
 
     render() {
