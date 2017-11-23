@@ -13,9 +13,9 @@ class InboxPage extends Component {
         }
     };
 
-    static contextTypes = {
-        router: React.PropTypes.object.isRequired
-    };
+    // static contextTypes = {
+    //     router: React.PropTypes.object.isRequired
+    // };
 
     handlePreviewClick(messageId) {
         console.log(messageId);
